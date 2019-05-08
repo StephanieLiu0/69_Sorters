@@ -14,7 +14,12 @@ public class InsertionSorter extends Sorter {
     
 
     /**
-      sort the user's data, implementing insertion sort
+      precondition: given an ArrayList of Strings
+
+      for elements at index 1 to n-1 in the ArrayList,
+      insert the element at the correct position in the sorted region
+
+      postcondition: the ArrayList of Strings is sorted
      */
     public void mySort() {
 	for (int i = 1;

@@ -14,7 +14,13 @@ public class SelectionSorter extends Sorter {
 
 
     /**
-      sort the user's data, implementing selection sort
+      precondition: given an ArrayList of Strings
+
+      for elements at 0 to n-2 in the ArrayList,
+      swap the element at the current index and
+      the smallest element in the unsorted region
+
+      postcondition: the ArrayList of Strings is sorted
      */
     public void mySort() {
 	for (int i = 0;
