@@ -20,19 +20,19 @@ public class InsertionSorter extends Sorter {
 	for (int i = 1;
 	     i < elements.size();
 	     i++) {
-	    insertOne( elements, i);
+	    insertOne(i);
 	};
     }
     
-    private void insertOne( ArrayList< String> list, int numSorted) {
-	String valueToInsert = list.get(numSorted);
+    private void insertOne( int numSorted) {
+	String valueToInsert = elements.get(numSorted);
 	int indexToCompare;
 	for (indexToCompare = numSorted-1;
-	     indexToCompare > -1 && list.get(indexToCompare).compareTo(valueToInsert)>0;
+	     indexToCompare > -1 && elements.get(indexToCompare).compareTo(valueToInsert)>0;
 	     indexToCompare--) {
-	    list.set( indexToCompare+1, list.get(indexToCompare));
+	    elements.set( indexToCompare+1, elements.get(indexToCompare));
 	}
-	list.set( indexToCompare+1, valueToInsert);
-	System.out.println( list + " numSorted: " + (numSorted+1));
+	elements.set( indexToCompare+1, valueToInsert);
+	System.out.println( elements + " numSorted: " + (numSorted+1));
     };
 }
